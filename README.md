@@ -22,13 +22,13 @@ All we have to do is add some subviews to our **CustomCell** class, and give it 
 ##Implementation
 
 First of all go to Storyboard, set up your custom table view with custom cells. I am not going to go into how that is done (there are some pretty good [UITableView tutorials](http://www.raywenderlich.com/tag/uitableview) out there).  
-I will say however that this demo requires that your table view is owned by **CustomTableViewController** and any cells you want the gestures to work on should be owned by **CustomCell** (If you have your own classes for these that is ok, just do some word-substitution in your head from here on out).
+I will say however that this demo requires that your table view is owned by **CustomTableViewController** and any cells you want the gestures to work on should be owned by **CustomCell** (if you have your own classes for these that is ok, just do some word-substitution in your head from here on out).
 
 ###CustomCell
 
-In Storyboard, set up two views inside your cell's view. Make them the same size, shape and position as the cell. Somehow differentiate the views (make one a different color, stick on some labels, etc). Make sure the `frontView` is in front. Wire the views to two properties in **CustomCell**: `frontView` and `backView`.
+In Storyboard, set up two views inside your cell's view. Make them the same size, shape and position as the cell. Wire the views to two properties in **CustomCell**: `frontView` and `backView`. Somehow differentiate the views (make one a different color, stick on some labels, etc). Make sure the `frontView` is in front.
 
-One last thing: In Storyboard, select the CustomCell and in the Attributes editor (command+alt+4) set `Selection` to `None`. This will remove the annoying blue selection background that appears every time you tap a cell. If you really want to you can make your own, but [they may not behave the way you expect](http://giorgiocalderolla.com/2011/04/16/customizing-uitableviewcells-a-better-way/)).
+One last thing: From Storyboard select the cell and in the Attributes editor (command+alt+4) set `Selection` to `None`. This will remove the annoying blue selection background that appears every time you tap a cell. If you really want to you can make your own, but [they may not behave the way you expect](http://giorgiocalderolla.com/2011/04/16/customizing-uitableviewcells-a-better-way/)).
 
 Your cell is now ready.
 
@@ -41,13 +41,13 @@ This demo makes use of a separate `Constants.h` file that defines the following:
     #define PAN_CLOSED_X 0
     #define PAN_OPEN_X -300
 
-Notice that `PAN_OPEN_X` is not -320. This is because our cell will have a tab handle visible on the left side of the screen when it is in the open position. If you want to make your cell fly off the screen entirely make it -320. Since the pan gesture is recognized by the cell and it is only the cell's `frontView` that pans away the pan gesture will still be caught if the cell is in the open position. For this demo we want a small "handle" to remain visible when the cell is open.
+Notice that `PAN_OPEN_X` is not -320. This is because our cell will have a tab handle visible on the left side of the screen when it is in the open position. If you want to make your cell fly off the screen entirely then `#define PAN_OPEN_X -320`. Since the pan gesture is recognized by the cell and it is only the cell's `frontView` that pans away, the pan gesture will still be caught if the cell is in the open position. For this demo we want a small "handle" to remain visible when the cell is open.
 
-Make the **CustomTableViewController.m** `#import "Constants.h"`.
+Make the **CustomTableViewController** `#import "Constants.h"`.
 
 ###CustomTableViewController setup
 
-Make sure in the `.h` that **CustomTableViewController** implements the *UITableViewDataSource* and *UIGestureRecognizerDelegate* protocols. Note that you will need to implement the following methods in your `.m` (but you do not need to declare them in the `.h` because they are already declared in the protocols).
+Make sure in its `.h` that **CustomTableViewController** implements the *UITableViewDataSource* and *UIGestureRecognizerDelegate* protocols. Note that you will need to implement the following methods in its `.m` (but you will not need to declare them in the `.h` because they are already declared in the protocols):
 
     #pragma mark - Table view data source
     - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -56,21 +56,21 @@ Make sure in the `.h` that **CustomTableViewController** implements the *UITable
     #pragma mark - Gesture recognizer delegate
     - (BOOL)gestureRecognizerShouldBegin:(UIPanGestureRecognizer *)panGestureRecognizer
 
-We will also need a couple state variables and our own handler method for the pan gesture. Declare these in the `.h` and `@synthesize`/implement them in the `.m`:
+We will also need a couple of state variables and our own handler method for the pan gesture. Declare these in the `.h` and `@synthesize`/implement them in the `.m`:
 
     @property (nonatomic) float openCellLastTX;
     @property (nonatomic, strong) NSIndexPath *openCellIndexPath;
     - (void)handlePan:(UIPanGestureRecognizer *)panGestureRecognizer;
     - (void)snapView:(UIView *)view toX:(float)x animated:(BOOL)animated;
 
-`openCellLastTX` keeps track of the last translation x-value we recorded. Essentially this lets us "continue" the pan. Useful when the user wants to close a cell by panning (also has connotations if you disable the "snapping"--more on that in a bit).  
+`openCellLastTX` keeps track of the last x-translation value we recorded. Essentially this lets us "continue" the pan. Useful when the user wants to close a cell by panning (also has connotations if you disable the "snapping"--more on that in a bit). This is sometimes 0.  
 `openCellIndexPath` keeps track of which cell is currently open. This is sometimes `nil`.  
 `-handlePan:` does the actual view manipulation.  
-`-snapView:toX:animated:` will "snap" our cell to a certain x-value.
+`-snapView:toX:animated:` will "snap" our cell to a certain x-translation from its origin.
 
 ###CustomTableView table data source
 
-Most of the stuff in the data source does not apply to this demo (stuff like `-numberOfSectionsInTableView:` and `-tableView:numberOfRowsInSection:`). However we need to add a couple lines to `-tableView:cellForRowAtIndexPath:`:
+Most of the stuff in the data source does not apply to this demo (stuff like `-numberOfSectionsInTableView:` and `-tableView:numberOfRowsInSection:`). However we do need to add a few lines to `-tableView:cellForRowAtIndexPath:`:
 
     UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
     [panGestureRecognizer setDelegate:self];
