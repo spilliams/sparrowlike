@@ -1,0 +1,281 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6AD3E8E5151993F700FF06E0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AD3E8E4151993F600FF06E0 /* UIKit.framework */; };
+		6AD3E8E7151993F700FF06E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AD3E8E6151993F700FF06E0 /* Foundation.framework */; };
+		6AD3E8E9151993F700FF06E0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AD3E8E8151993F700FF06E0 /* CoreGraphics.framework */; };
+		6AD3E8EF151993F700FF06E0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6AD3E8ED151993F700FF06E0 /* InfoPlist.strings */; };
+		6AD3E8F1151993F700FF06E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AD3E8F0151993F700FF06E0 /* main.m */; };
+		6AD3E8F5151993F700FF06E0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AD3E8F4151993F700FF06E0 /* AppDelegate.m */; };
+		6AD3E8F8151993F700FF06E0 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AD3E8F6151993F700FF06E0 /* MainStoryboard.storyboard */; };
+		6AD3E8FB151993F700FF06E0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AD3E8FA151993F700FF06E0 /* ViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6AD3E8E0151993F600FF06E0 /* Sparrowlike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sparrowlike.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AD3E8E4151993F600FF06E0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6AD3E8E6151993F700FF06E0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6AD3E8E8151993F700FF06E0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6AD3E8EC151993F700FF06E0 /* Sparrowlike-Info.plist */ = {isa = PBXFileReference; path = "Sparrowlike-Info.plist"; sourceTree = "<group>"; };
+		6AD3E8EE151993F700FF06E0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6AD3E8F0151993F700FF06E0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6AD3E8F2151993F700FF06E0 /* Sparrowlike-Prefix.pch */ = {isa = PBXFileReference; path = "Sparrowlike-Prefix.pch"; sourceTree = "<group>"; };
+		6AD3E8F3151993F700FF06E0 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		6AD3E8F4151993F700FF06E0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6AD3E8F7151993F700FF06E0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		6AD3E8F9151993F700FF06E0 /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		6AD3E8FA151993F700FF06E0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6AD3E8DD151993F600FF06E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AD3E8E5151993F700FF06E0 /* UIKit.framework in Frameworks */,
+				6AD3E8E7151993F700FF06E0 /* Foundation.framework in Frameworks */,
+				6AD3E8E9151993F700FF06E0 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6AD3E8D5151993F600FF06E0 = {
+			isa = PBXGroup;
+			children = (
+				6AD3E8EA151993F700FF06E0 /* Sparrowlike */,
+				6AD3E8E3151993F600FF06E0 /* Frameworks */,
+				6AD3E8E1151993F600FF06E0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6AD3E8E1151993F600FF06E0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6AD3E8E0151993F600FF06E0 /* Sparrowlike.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6AD3E8E3151993F600FF06E0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6AD3E8E4151993F600FF06E0 /* UIKit.framework */,
+				6AD3E8E6151993F700FF06E0 /* Foundation.framework */,
+				6AD3E8E8151993F700FF06E0 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6AD3E8EA151993F700FF06E0 /* Sparrowlike */ = {
+			isa = PBXGroup;
+			children = (
+				6AD3E8F3151993F700FF06E0 /* AppDelegate.h */,
+				6AD3E8F4151993F700FF06E0 /* AppDelegate.m */,
+				6AD3E8F6151993F700FF06E0 /* MainStoryboard.storyboard */,
+				6AD3E8F9151993F700FF06E0 /* ViewController.h */,
+				6AD3E8FA151993F700FF06E0 /* ViewController.m */,
+				6AD3E8EB151993F700FF06E0 /* Supporting Files */,
+			);
+			path = Sparrowlike;
+			sourceTree = "<group>";
+		};
+		6AD3E8EB151993F700FF06E0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6AD3E8EC151993F700FF06E0 /* Sparrowlike-Info.plist */,
+				6AD3E8ED151993F700FF06E0 /* InfoPlist.strings */,
+				6AD3E8F0151993F700FF06E0 /* main.m */,
+				6AD3E8F2151993F700FF06E0 /* Sparrowlike-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6AD3E8DF151993F600FF06E0 /* Sparrowlike */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6AD3E8FE151993F700FF06E0 /* Build configuration list for PBXNativeTarget "Sparrowlike" */;
+			buildPhases = (
+				6AD3E8DC151993F600FF06E0 /* Sources */,
+				6AD3E8DD151993F600FF06E0 /* Frameworks */,
+				6AD3E8DE151993F600FF06E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sparrowlike;
+			productName = Sparrowlike;
+			productReference = 6AD3E8E0151993F600FF06E0 /* Sparrowlike.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6AD3E8D7151993F600FF06E0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 6AD3E8DA151993F600FF06E0 /* Build configuration list for PBXProject "Sparrowlike" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6AD3E8D5151993F600FF06E0;
+			productRefGroup = 6AD3E8E1151993F600FF06E0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6AD3E8DF151993F600FF06E0 /* Sparrowlike */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6AD3E8DE151993F600FF06E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AD3E8EF151993F700FF06E0 /* InfoPlist.strings in Resources */,
+				6AD3E8F8151993F700FF06E0 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6AD3E8DC151993F600FF06E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AD3E8F1151993F700FF06E0 /* main.m in Sources */,
+				6AD3E8F5151993F700FF06E0 /* AppDelegate.m in Sources */,
+				6AD3E8FB151993F700FF06E0 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6AD3E8ED151993F700FF06E0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6AD3E8EE151993F700FF06E0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6AD3E8F6151993F700FF06E0 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6AD3E8F7151993F700FF06E0 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6AD3E8FC151993F700FF06E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6AD3E8FD151993F700FF06E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6AD3E8FF151993F700FF06E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sparrowlike/Sparrowlike-Prefix.pch";
+				INFOPLIST_FILE = "Sparrowlike/Sparrowlike-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6AD3E900151993F700FF06E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sparrowlike/Sparrowlike-Prefix.pch";
+				INFOPLIST_FILE = "Sparrowlike/Sparrowlike-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6AD3E8DA151993F600FF06E0 /* Build configuration list for PBXProject "Sparrowlike" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AD3E8FC151993F700FF06E0 /* Debug */,
+				6AD3E8FD151993F700FF06E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6AD3E8FE151993F700FF06E0 /* Build configuration list for PBXNativeTarget "Sparrowlike" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AD3E8FF151993F700FF06E0 /* Debug */,
+				6AD3E900151993F700FF06E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6AD3E8D7151993F600FF06E0 /* Project object */;
+}
