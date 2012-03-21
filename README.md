@@ -6,9 +6,13 @@ So you want some panning table cells? Like the ones on the Sparrow app? (Similar
 
 Oh you really wanted swipe? Ok look [here](https://github.com/boctor/idev-recipes/tree/master/SideSwipeTableView) or [here](https://github.com/lukeredpath/LRSlidingTableViewCell). Otherwise follow me!
 
+Another Disclaimer: note that the likeness to Sparrow's app ends at the cell panning. This demo does not cover the table panning that Sparrow has.
+
+All the code I describe below is provided in this here repository, free of charge and free in speech. If you have problems with it [open an issue](https://github.com/spilliams/sparrowlike/issues/new).
+
 ##Overview
 
-All we have to do is add some subviews to our **CustomCell** class, and give it a gesture recognizer to manipulate those subviews (specifically the front one). Then we'll want some variables in the **CustomTableViewController** to keep track of state. For the purposes of this demo we're only allowing one cell open at a time for instance. Also note that the likeness to Sparrow's app ends at the cell panning. This demo does not cover the table panning that Sparrow has.
+All we have to do is add some subviews to our **CustomCell** class, and give it a gesture recognizer to manipulate those subviews (specifically the front one). Then we'll want some variables in the **CustomTableViewController** to keep track of state. For the purposes of this demo we're only allowing one cell open at a time for instance.
 
 ##Requirements
 
@@ -17,14 +21,14 @@ An iPhone app that uses Storyboards and ARC
 
 ##Implementation
 
-First of all go to Storyboard, set up your custom table view with custom cells. I'm not going to go into how that's done. If you don't know, go read a [TableView tutorial](http://www.raywenderlich.com/tag/uitableview).  
+First of all go to Storyboard, set up your custom table view with custom cells. I'm not going to go into how that's done (there are some pretty good [TableView tutorials](http://www.raywenderlich.com/tag/uitableview) out there).  
 I will say however that this demo requires that your **UITableViewController** is owned by **CustomTableViewController** and any cells you want the gestures to work on should be owned by **CustomCell** and have the identifier `CustomCell`.
 
 ###CustomCell
 
 In Storyboard, set up two views inside your cell's view. Make them the same size, shape and position as the cell. Somehow differentiate the views (make one a different color, stick on some labels, etc). Make sure the `frontView` is in front. Wire the views to two properties in **CustomCell**: `frontView` and `backView`.
 
-One last thing: In Storyboard, select the CustomCell and in the Attributes editor (command+alt+4) set `Selection` to `None`. This wil remove the annoying blue selection background that appears every time you tap a cell. If you really want you can make your own, but they may not behave the way you want ([description](http://giorgiocalderolla.com/2011/04/16/customizing-uitableviewcells-a-better-way/)).
+One last thing: In Storyboard, select the CustomCell and in the Attributes editor (command+alt+4) set `Selection` to `None`. This will remove the annoying blue selection background that appears every time you tap a cell. If you really want you can make your own, but [they may not behave the way you want](http://giorgiocalderolla.com/2011/04/16/customizing-uitableviewcells-a-better-way/)).
 
 Your cell is now ready.
 
@@ -191,4 +195,4 @@ Ok only one more piece to this puzzle:
 
 Pretty simple. It allows us to animate the transformation of a view to any x point.
 
-And that's it! It should be working properly now...let me know if you have questions? I may or may not develop this into a framework. I have some ideas about that acceleration stuff...
+And that's it! It should be working properly now. If you have questions or concerns please [add an issue to this repository](https://github.com/spilliams/sparrowlike/issues/new).
