@@ -2,17 +2,17 @@ Disclaimer: I recently had to figure all this stuff out on my own, and I venture
 
 ------------
 
-So you want some panning table cells? Like the ones on the [Sparrow app](http://sparrowmailapp.com/)*? (Similar to the ones on Twitter, but those use a swipe gesture, not a pan gesture. There are a [few differences](http://developer.apple.com/library/ios/#documentation/EventHandling/Conceptual/EventHandlingiPhoneOS/GestureRecognizers/GestureRecognizers.html#//apple_ref/doc/uid/TP40009541-CH6-SW12)).
+So you want some panning table cells? Like the ones on the [Sparrow app](http://sparrowmailapp.com/)*? (Similar to the ones in the Twitter app, except those use a swipe gesture not a pan gesture. There are a [few differences](http://developer.apple.com/library/ios/#documentation/EventHandling/Conceptual/EventHandlingiPhoneOS/GestureRecognizers/GestureRecognizers.html#//apple_ref/doc/uid/TP40009541-CH6-SW12) between swiping and panning).
 
-Oh you really wanted swipe? Ok look [here](https://github.com/boctor/idev-recipes/tree/master/SideSwipeTableView) or [here](https://github.com/lukeredpath/LRSlidingTableViewCell) for submoduleable frameworks. Otherwise follow me!
+Oh, you really wanted swipe? Ok look [here](https://github.com/boctor/idev-recipes/tree/master/SideSwipeTableView) or [here](https://github.com/lukeredpath/LRSlidingTableViewCell) for submoduleable frameworks. Otherwise follow me!
 
-Another Disclaimer: note that the likeness to Sparrow's app ends at the cell panning. This demo does not cover the table panning that Sparrow has.
+Another Disclaimer: note that the likeness to Sparrow's app ends at the cell panning. This demo does not cover the table panning that Sparrow has (although if you are a gesture newbie this demo may give you some insight to start tackling that).
 
-All the code I describe below is provided in this here repository, free of charge and free in speech. If you have questions on, concerns about or problems with it [open an issue](https://github.com/spilliams/sparrowlike/issues/new).
+All of the code I describe below is provided in this here repository, free of charge and free in speech. If you have questions on, concerns about or problems with it, please [open an issue](https://github.com/spilliams/sparrowlike/issues/new).
 
 ##Overview
 
-All we have to do is add some subviews to our **CustomCell** class, and give it a gesture recognizer to manipulate those subviews (specifically the front one). Then we'll want some variables in the **CustomTableViewController** to keep track of state. For the purposes of this demo we're only allowing one cell open at a time for instance.
+All we have to do is add some subviews to our **CustomCell** class, and give it a gesture recognizer to manipulate those subviews (specifically the front one). Then we will want some variables in the **CustomTableViewController** to keep track of state. For the purposes of this demo we are only allowing one cell open at a time. If your app requires something different you will probably need different state variables.
 
 ##Requirements
 
@@ -21,8 +21,8 @@ All we have to do is add some subviews to our **CustomCell** class, and give it 
 
 ##Implementation
 
-First of all go to Storyboard, set up your custom table view with custom cells. I'm not going to go into how that's done (there are some pretty good [UITableView tutorials](http://www.raywenderlich.com/tag/uitableview) out there).  
-I will say however that this demo requires that your table view is owned by **CustomTableViewController** and any cells you want the gestures to work on should be owned by **CustomCell** (If you have your own classes for these that's ok, just do some word-substitution in your head from here on out).
+First of all go to Storyboard, set up your custom table view with custom cells. I am not going to go into how that is done (there are some pretty good [UITableView tutorials](http://www.raywenderlich.com/tag/uitableview) out there).  
+I will say however that this demo requires that your table view is owned by **CustomTableViewController** and any cells you want the gestures to work on should be owned by **CustomCell** (If you have your own classes for these that is ok, just do some word-substitution in your head from here on out).
 
 ###CustomCell
 
@@ -41,13 +41,13 @@ This demo makes use of a separate `Constants.h` file that defines the following:
     #define PAN_CLOSED_X 0
     #define PAN_OPEN_X -300
 
-Notice that `PAN_OPEN_X` is not -320. This is because our cell will have a tab handle visible on the left side of the screen when it's in the open position. If you want to make your cell fly off the screen entirely make it -320. Since the pan gesture is recognized by the cell and it's only the cell's `frontView` that pans away the pan gesture will still be caught if the cell is in the open position. For this demo we want a small "handle" to remain visible when the cell is open.
+Notice that `PAN_OPEN_X` is not -320. This is because our cell will have a tab handle visible on the left side of the screen when it is in the open position. If you want to make your cell fly off the screen entirely make it -320. Since the pan gesture is recognized by the cell and it is only the cell's `frontView` that pans away the pan gesture will still be caught if the cell is in the open position. For this demo we want a small "handle" to remain visible when the cell is open.
 
 Make the **CustomTableViewController.m** `#import "Constants.h"`.
 
 ###CustomTableViewController setup
 
-Make sure in the `.h` that **CustomTableViewController** implements the *UITableViewDataSource* and *UIGestureRecognizerDelegate* protocols. Note that you will need to implement the following methods in your `.m` (but you don't need to declare them in the `.h` because they're already declared in the protocols).
+Make sure in the `.h` that **CustomTableViewController** implements the *UITableViewDataSource* and *UIGestureRecognizerDelegate* protocols. Note that you will need to implement the following methods in your `.m` (but you do not need to declare them in the `.h` because they are already declared in the protocols).
 
     #pragma mark - Table view data source
     - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -56,7 +56,7 @@ Make sure in the `.h` that **CustomTableViewController** implements the *UITable
     #pragma mark - Gesture recognizer delegate
     - (BOOL)gestureRecognizerShouldBegin:(UIPanGestureRecognizer *)panGestureRecognizer
 
-We'll also need a couple state variables and our own handler method for the pan gesture. Declare these in the `.h` and `@synthesize`/implement them in the `.m`:
+We will also need a couple state variables and our own handler method for the pan gesture. Declare these in the `.h` and `@synthesize`/implement them in the `.m`:
 
     @property (nonatomic) float openCellLastTX;
     @property (nonatomic, strong) NSIndexPath *openCellIndexPath;
@@ -80,7 +80,7 @@ This tells the cell that it should recognize a pan gesture, and that when it doe
 
 ###CustomTableView gesture recognizer delegate
 
-The reason we need the *UIGestureRecognizerDelegate* protocol is because without it we can't cancel invalid pan gestures. Case in point: If you ran the app now you won't be able to scroll the table. That's because the `panGestureRecognizer` will always succeed, causing the hidden `UIScrollViewPanGestureRecognizer` to fail. There's some highly-recommended interesting [documentation](http://developer.apple.com/library/ios/DOCUMENTATION/EventHandling/Conceptual/EventHandlingiPhoneOS/GestureRecognizers/GestureRecognizers.html#//apple_ref/doc/uid/TP40009541-CH6-SW15) on gesture hierarchies. Basically we want to cancel any pan gestures that are not horizontal in nature. We do this with a simple test.
+The reason we need the *UIGestureRecognizerDelegate* protocol is because without it we cannot cancel invalid pan gestures. Case in point: If you ran the app now you will not be able to scroll the table. That is because the `panGestureRecognizer` will always succeed, causing the hidden `UIScrollViewPanGestureRecognizer` to fail. There is some highly-recommended interesting [documentation](http://developer.apple.com/library/ios/DOCUMENTATION/EventHandling/Conceptual/EventHandlingiPhoneOS/GestureRecognizers/GestureRecognizers.html#//apple_ref/doc/uid/TP40009541-CH6-SW15) on gesture hierarchies. Basically we want to cancel any pan gestures that are not horizontal in nature. We do this with a simple test.
 
     - (BOOL)gestureRecognizerShouldBegin:(UIPanGestureRecognizer *)panGestureRecognizer
     {
@@ -93,7 +93,7 @@ Oh yeah: you probably already noticed this, but your **CustomTableViewController
 
 ###CustomTableView gesture handler
 
-Now for the fun part. We're going to do this in increments so that neither of us get lost.
+Now for the fun part. We are going to do this in increments so that neither of us get lost.
 
 First set up the baseline gesture handler.
 
@@ -114,14 +114,14 @@ First set up the baseline gesture handler.
         }
     }
 
-You can test that it works! Run the app and you should be able to not only scroll the table, but also see that your pan gesture is working. What's next? Well let's talk about what we want to happen when this gesture occurs.
+You can test that it works! Run the app and you should be able to not only scroll the table, but also see that your pan gesture is working. What is next? What should happen when this gesture occurs?
 
-- Began: the open cell should snap closed (unless it's the one being gestured on now)
+- Began: the open cell should snap closed (unless it is the one being gestured on now)
 - Changed: the current cell should track with the user's finger, but not outside our boundaries
 - Ended: the current cell should snap either open or closed, taking into account the velocity of the touch  
 This event should also set/reset our state variables accordingly
 
-Ok, now for the meat of the handler. To start, we'll need a few variables in front of the `switch` block. Because `switch` is a C thing and not an Objective-C thing, we can't declare objects inside it. But we want to use these in multiple places anyway, so go ahead and put these above the `switch` statement:
+Ok, now for the meat of the handler. To start, we will need a few variables in front of the `switch` block. Because `switch` is a C thing and not an Objective-C thing, we cannot declare objects inside it. But we want to use these in multiple places anyway, so go ahead and put these above the `switch` statement:
 
     float threshold = (PAN_OPEN_X+PAN_CLOSED_X)/2.0;
     float vX = 0.0;
@@ -129,11 +129,11 @@ Ok, now for the meat of the handler. To start, we'll need a few variables in fro
     NSIndexPath *indexPath = [self.tableView indexPathForCell:(CustomCell *)[panGestureRecognizer view] ];
     UIView *view = ((CustomCell *)panGestureRecognizer.view).frontView;
 
-`threshold` describes the line that divides "this cell will snap open when you let go" and "this cell will snap closed when you let go". Right now it's set halfway between open and closed.  
+`threshold` describes the line that divides "this cell will snap open when you let go" and "this cell will snap closed when you let go". Right now it is set halfway between open and closed.  
 `vX` is the velocity of the touch. We only really use this in the Ended case. 
 `compare` is useful for checking against `threshold` and our out-of-bounds conditions.  
 `indexPath` is the index path of the current cell.  
-`view` is the view that's responding to the gesture.
+`view` is the view that is responding to the gesture.
 
 In the Began block:
 
@@ -144,7 +144,7 @@ In the Began block:
     }
     break;
 
-Basically we're checking that this cell and the open cell are different, and if they are we snap the open cell closed and reset the state variables.
+Basically we are checking that this cell and the open cell are different, and if they are we snap the open cell closed and reset the state variables.
 
 In the Ended block:
 
@@ -161,8 +161,8 @@ In the Ended block:
     }
     break;
 
-First of all note that in an Ended state we can't use `-translationInView:`. So that's the reason why `compare = view.transform.tx + vX` and not `[panGestureRecognizer translationInView:self.view].x + vX` (side note about `-translationInView:`: it returns a `CGPoint` describing the **difference** between the currently-touched point and the initially-touched point).  
-Secondly note the velocity factor formula. Looks a little bit like the acceleration equation `d = (vf + vi)*t / 2`. Essentially we want to figure out how far the cell *would* travel if it had no boundaries. Then we use that position to determine which side to snap to. Sure, it doesn't go through that animation of slowing down to its final position before the animation of the snap, but it's a lot more intuitive than if we didn't take velocity into account at all.
+First of all note that in an Ended state we cannot use `-translationInView:`. So that is the reason why `compare = view.transform.tx + vX` and not `[panGestureRecognizer translationInView:self.view].x + vX` (side note about `-translationInView:`: it returns a `CGPoint` describing the **difference** between the currently-touched point and the initially-touched point).  
+Secondly note the velocity factor formula. Looks a little bit like the acceleration equation `d = (vf + vi)*t / 2`. Essentially we want to figure out how far the cell *would* travel if it had no boundaries. Then we use that position to determine which side to snap to. Sure, it does not go through that animation of slowing down to its final position before the animation of the snap, but it is a lot more intuitive than if we did not take velocity into account at all.
 
 In the Changed block:
 
@@ -174,9 +174,9 @@ In the Changed block:
     [view setTransform:CGAffineTransformMakeTranslation(compare, 0)];
     break;
 
-We're testing the current translation of the cell against `PAN_OPEN_X` and `PAN_CLOSED_X` because we don't want the user to be able to pan the cell outside of its bounds (it would still snap back to the bound, but it's just not a UI feature we want to support).  
-Also make note of the way we translate the view. There are several ways to do it, including using [`CGRectOffset`](http://developer.apple.com/library/mac/documentation/GraphicsImaging/Reference/CGGeometry/Reference/reference.html#//apple_ref/doc/uid/TP30000955-CH1g-F17162)s, [`CGRectMake`](http://developer.apple.com/library/mac/documentation/GraphicsImaging/Reference/CGGeometry/Reference/reference.html#//apple_ref/doc/uid/TP30000955-CH1g-F17161)s and [`setCenter`](http://developer.apple.com/library/ios/documentation/uikit/reference/uiview_class/UIView/UIView.html#//apple_ref/doc/uid/TP40006816-CH3-SW3)s. We use [`CGAffineTransform`](http://developer.apple.com/library/mac/#documentation/graphicsimaging/Reference/CGAffineTransform/Reference/reference.html)s because they're fun.  
-Lastly notice the use of `openCellLastTX` (we used it in the Began and Ended blocks too but this note is more apt here). If we were to disable the snapping in the Ended block right now you would notice that when you begin a pan gesture the cell will pick up where it left off. This is not by accident. This is a side-effect of keeping the `openCellLastTX` state property. When you end a pan gesture, the x-translation is saved so that it may be re-applied at the beginning of the next pan gesture (but only the beginning: notice we don't save `openCellLastTX` during the Changed state).
+We are testing the current translation of the cell against `PAN_OPEN_X` and `PAN_CLOSED_X` because we do not want the user to be able to pan the cell outside of its bounds (it would still snap back to the bound, but it is just not a UI feature we want to support).  
+Also make note of the way we translate the view. There are several ways to do it, including using [`CGRectOffset`](http://developer.apple.com/library/mac/documentation/GraphicsImaging/Reference/CGGeometry/Reference/reference.html#//apple_ref/doc/uid/TP30000955-CH1g-F17162)s, [`CGRectMake`](http://developer.apple.com/library/mac/documentation/GraphicsImaging/Reference/CGGeometry/Reference/reference.html#//apple_ref/doc/uid/TP30000955-CH1g-F17161)s and [`setCenter`](http://developer.apple.com/library/ios/documentation/uikit/reference/uiview_class/UIView/UIView.html#//apple_ref/doc/uid/TP40006816-CH3-SW3)s. We use [`CGAffineTransform`](http://developer.apple.com/library/mac/#documentation/graphicsimaging/Reference/CGAffineTransform/Reference/reference.html)s because they are fun.  
+Lastly notice the use of `openCellLastTX` (we used it in the Began and Ended blocks too but this note is more apt here). If we were to disable the snapping in the Ended block right now you would notice that when you begin a pan gesture the cell will pick up where it left off. This is not by accident. This is a side-effect of keeping the `openCellLastTX` state property. When you end a pan gesture, the x-translation is saved so that it may be re-applied at the beginning of the next pan gesture (but only the beginning: notice we do not save `openCellLastTX` during the Changed state).
 
 Ok only one more piece to this puzzle:
 
@@ -197,7 +197,7 @@ Ok only one more piece to this puzzle:
 
 Pretty simple. It allows us to animate any x-transformation of a view.
 
-And that's it! It should be working properly now. If you have questions or concerns please [open an issue](https://github.com/spilliams/sparrowlike/issues/new).
+And that about does it! It should be working properly now. If you have questions or concerns please [open an issue](https://github.com/spilliams/sparrowlike/issues/new).
 
 ------------
 
