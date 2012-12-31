@@ -26,6 +26,8 @@ I will say however that this demo requires that your table view is owned by **Cu
 
 ###CustomCell
 
+**Update**: You'll want to turn off Auto-Layout. Open the Storyboard and in the File Inspector (cmd-alt-1) uncheck the Use Autolayout checkbox (in the Interface Builder Document section).
+
 In Storyboard, set up two views inside your cell's view. Make them the same size, shape and position as the cell. Wire the views to two properties in **CustomCell**: `frontView` and `backView`. Somehow differentiate the views (make one a different color, stick on some labels, etc). Make sure the `frontView` is in front.
 
 One last thing: From Storyboard select the cell and in the Attributes editor (command+alt+4) set `Selection` to `None`. This will remove the annoying blue selection background that appears every time you tap a cell. If you really want to you can make your own, but [they may not behave the way you expect](http://giorgiocalderolla.com/2011/04/16/customizing-uitableviewcells-a-better-way/)).
