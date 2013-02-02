@@ -35,7 +35,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    [self.tableView setDelegate:self];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -87,7 +87,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 3;
+    return 7;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -156,10 +156,14 @@
             break;
         default:
             break;
+            
+            
     }
 }
+
 -(void)snapView:(UIView *)view toX:(float)x animated:(BOOL)animated
 {
+    
     if (animated) {
         [UIView beginAnimations:nil context:nil];
         [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
@@ -173,17 +177,14 @@
     }
 }
 
-#pragma mark - Table view delegate
+#pragma mark -
+#pragma UIScrollViewDelegate methods
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+- (void)scrollViewWillBeginDragging:(UIScrollView *)sender {
+    if ([sender isEqual:[self tableView]]) {
+        CustomCell *openCell = (CustomCell *) [self.tableView cellForRowAtIndexPath:openCellIndexPath];
+        [self snapView:openCell.frontView toX:PAN_CLOSED_X animated:YES];
+    }
 }
 
 
