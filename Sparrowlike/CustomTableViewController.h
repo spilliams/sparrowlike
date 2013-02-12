@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CustomTableViewController : UITableViewController <UITableViewDataSource, UIGestureRecognizerDelegate>
+@class CustomCell;
+
+@interface CustomTableViewController : UITableViewController <UITableViewDataSource, UIGestureRecognizerDelegate,
+                                                                UIScrollViewDelegate>
 @property (nonatomic) float openCellLastTX;
 @property (nonatomic, strong) NSIndexPath *openCellIndexPath;
 - (void)handlePan:(UIPanGestureRecognizer *)panGestureRecognizer;
