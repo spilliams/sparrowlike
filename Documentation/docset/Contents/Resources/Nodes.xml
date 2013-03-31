@@ -39,8 +39,8 @@
 		
 		
 		<Node id="2">
-			<Name>SLPanningTableViewCellDelegate</Name>
-			<Path>Protocols/SLPanningTableViewCellDelegate.html</Path>
+			<Name>SLPanningCellDelegate</Name>
+			<Path>Protocols/SLPanningCellDelegate.html</Path>
 		</Node>
 		
 	</Library>

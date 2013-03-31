@@ -4,7 +4,8 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/cl/SLPanningCell</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">A panning cell responds to horizontal pan gestures that &quot;open&quot; and &quot;close&quot;
+its content view.</Abstract>
 			<DeclaredIn>SLPanningCell.h</DeclaredIn>
 			
 			<NodeRef refid="1"/>
@@ -13,10 +14,15 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/SLPanningCell/setDelegate:</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">The cell&apos;s delegate</Abstract>
 			<DeclaredIn>SLPanningCell.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic) id&lt;SLPanningTableViewCellDelegate&gt; delegate</Declaration>
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/intf/SLPanningCellDelegate</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (nonatomic) id&lt;SLPanningCellDelegate&gt; delegate</Declaration>
 			
 			
 			<Anchor>//api/name/delegate</Anchor>
@@ -24,10 +30,15 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/SLPanningCell/delegate</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">The cell&apos;s delegate</Abstract>
 			<DeclaredIn>SLPanningCell.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic) id&lt;SLPanningTableViewCellDelegate&gt; delegate</Declaration>
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/intf/SLPanningCellDelegate</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (nonatomic) id&lt;SLPanningCellDelegate&gt; delegate</Declaration>
 			
 			
 			<Anchor>//api/name/delegate</Anchor>
@@ -35,7 +46,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/SLPanningCell/setDirection:</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">The direction the cell is allowed to pan</Abstract>
 			<DeclaredIn>SLPanningCell.h</DeclaredIn>			
 			
 			<Declaration>@property (nonatomic) SLPanningTableViewCellDirection direction</Declaration>
@@ -46,7 +57,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/SLPanningCell/direction</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">The direction the cell is allowed to pan</Abstract>
 			<DeclaredIn>SLPanningCell.h</DeclaredIn>			
 			
 			<Declaration>@property (nonatomic) SLPanningTableViewCellDirection direction</Declaration>
@@ -57,11 +68,16 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/SLPanningCell/setState:</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Change the cell&apos;s state programmatically.</Abstract>
 			<DeclaredIn>SLPanningCell.h</DeclaredIn>			
 			
 			<Declaration>- (void)setState:(SLPanningTableViewCellState)newState</Declaration>
-			
+			<Parameters>
+				<Parameter>
+					<Name>newState</Name>
+					<Abstract type="html">The new state of the cell</Abstract>
+				</Parameter>
+			</Parameters>
 			
 			<Anchor>//api/name/setState:</Anchor>
 		</Token>
