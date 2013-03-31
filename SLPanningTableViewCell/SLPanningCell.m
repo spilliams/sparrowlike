@@ -10,13 +10,13 @@
 
 @implementation SLPanningCell
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+#pragma mark - Cell Lifecycle
+
+- (void)awakeFromNib
 {
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (self) {
-        // Initialization code
-    }
-    return self;
+    [super awakeFromNib];
+    
+    // TODO fancy shimming
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
@@ -24,6 +24,37 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (void)prepareForReuse
+{
+    [self setState:SLPanningTableViewCellStateClosed];
+    [super prepareForReuse];
+}
+
+#pragma mark - Public API
+
+- (void)setState:(SLPanningTableViewCellState)newState
+{
+    NSString *newStateString = @"Open";
+    if (newState == SLPanningTableViewCellStateClosed) {
+        newStateString = @"Closed";
+    }
+    BOOL delegateConforms = self.delegate && [self.delegate conformsToProtocol:@protocol(SLPanningCellDelegate)];
+    
+    SEL willSelector = NSSelectorFromString([NSString stringWithFormat:@"cellWillPan%@",newStateString]);
+    if (delegateConforms &&
+        [self.delegate respondsToSelector:willSelector]) {
+        [self.delegate performSelector:willSelector];
+    }
+    
+    // TODO do animation stuff
+    
+    SEL didSelector = NSSelectorFromString([NSString stringWithFormat:@"cellDidPan%@",newStateString]);
+    if (delegateConforms &&
+        [self.delegate respondsToSelector:willSelector]) {
+        [self.delegate performSelector:willSelector];
+    }
 }
 
 @end
