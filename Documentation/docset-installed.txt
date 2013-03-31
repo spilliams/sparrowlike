@@ -1,0 +1,4 @@
+Documentation set was installed to Xcode!
+
+Path: /Users/spencer/Library/Developer/Shared/Documentation/DocSets/com.spilliams.SLPanningTableViewCell.docset
+Time: 2013-03-31 18:33:05 +0000

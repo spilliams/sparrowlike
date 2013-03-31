@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/SLPanningTableViewCellDelegate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/SLPanningTableViewCellDelegate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SLPanningCell.h</DeclaredIn>
+			
+			<NodeRef refid="2"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SLPanningTableViewCellDelegate/cellWillPanOpen:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SLPanningCell.h</DeclaredIn>			
+			
+			<Declaration>- (void)cellWillPanOpen:(SLPanningCell *)cell</Declaration>
+			
+			
+			<Anchor>//api/name/cellWillPanOpen:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SLPanningTableViewCellDelegate/cellDidPanOpen:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SLPanningCell.h</DeclaredIn>			
+			
+			<Declaration>- (void)cellDidPanOpen:(SLPanningCell *)cell</Declaration>
+			
+			
+			<Anchor>//api/name/cellDidPanOpen:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SLPanningTableViewCellDelegate/cellWillPanClosed:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SLPanningCell.h</DeclaredIn>			
+			
+			<Declaration>- (void)cellWillPanClosed:(SLPanningCell *)cell</Declaration>
+			
+			
+			<Anchor>//api/name/cellWillPanClosed:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SLPanningTableViewCellDelegate/cellDidPanClosed:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SLPanningCell.h</DeclaredIn>			
+			
+			<Declaration>- (void)cellDidPanClosed:(SLPanningCell *)cell</Declaration>
+			
+			
+			<Anchor>//api/name/cellDidPanClosed:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

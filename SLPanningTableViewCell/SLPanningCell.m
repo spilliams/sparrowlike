@@ -1,16 +1,14 @@
 //
-//  CustomCell.m
-//  Sparrowlike
+//  SLPanningCell.m
+//  SLPanningTableViewCell
 //
-//  Created by Spencer Williams on 3/20/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Created by Spencer Williams on 3/31/13.
+//  Copyright (c) 2013 spilliams. All rights reserved.
 //
 
-#import "CustomCell.h"
+#import "SLPanningCell.h"
 
-@implementation CustomCell
-
-@synthesize backView, frontView;
+@implementation SLPanningCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

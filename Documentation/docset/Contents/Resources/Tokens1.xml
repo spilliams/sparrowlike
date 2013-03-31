@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SLPanningCell.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SLPanningCell</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SLPanningCell.h</DeclaredIn>
+			
+			<NodeRef refid="1"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SLPanningCell/setDelegate:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SLPanningCell.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) id&lt;SLPanningTableViewCellDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SLPanningCell/delegate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SLPanningCell.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) id&lt;SLPanningTableViewCellDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SLPanningCell/setDirection:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SLPanningCell.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) SLPanningTableViewCellDirection direction</Declaration>
+			
+			
+			<Anchor>//api/name/direction</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SLPanningCell/direction</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SLPanningCell.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) SLPanningTableViewCellDirection direction</Declaration>
+			
+			
+			<Anchor>//api/name/direction</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SLPanningCell/setState:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SLPanningCell.h</DeclaredIn>			
+			
+			<Declaration>- (void)setState:(SLPanningTableViewCellState)newState</Declaration>
+			
+			
+			<Anchor>//api/name/setState:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>
