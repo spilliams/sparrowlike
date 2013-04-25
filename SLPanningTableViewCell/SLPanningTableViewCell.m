@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 spilliams. All rights reserved.
 //
 
-#import "SLPanningCell.h"
+#import "SLPanningTableViewCell.h"
 
-@implementation SLPanningCell
+@implementation SLPanningTableViewCell
 
 #pragma mark - Cell Lifecycle
 
@@ -22,7 +22,7 @@
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];
-
+    
     // Configure the view for the selected state
 }
 
@@ -40,7 +40,7 @@
     if (newState == SLPanningTableViewCellStateClosed) {
         newStateString = @"Closed";
     }
-    BOOL delegateConforms = self.delegate && [self.delegate conformsToProtocol:@protocol(SLPanningCellDelegate)];
+    BOOL delegateConforms = self.delegate && [self.delegate conformsToProtocol:@protocol(SLPanningTableViewCellDelegate)];
     
     SEL willSelector = NSSelectorFromString([NSString stringWithFormat:@"cellWillPan%@",newStateString]);
     if (delegateConforms &&
@@ -52,8 +52,8 @@
     
     SEL didSelector = NSSelectorFromString([NSString stringWithFormat:@"cellDidPan%@",newStateString]);
     if (delegateConforms &&
-        [self.delegate respondsToSelector:willSelector]) {
-        [self.delegate performSelector:willSelector];
+        [self.delegate respondsToSelector:didSelector]) {
+        [self.delegate performSelector:didSelector];
     }
 }
 

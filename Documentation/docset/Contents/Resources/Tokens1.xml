@@ -1,75 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/SLPanningCell.html">
+	<File path="Classes/SLPanningTableViewCell.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/SLPanningCell</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/cl/SLPanningTableViewCell</TokenIdentifier>
 			<Abstract type="html">A panning cell responds to horizontal pan gestures that &quot;open&quot; and &quot;close&quot;
 its content view.</Abstract>
-			<DeclaredIn>SLPanningCell.h</DeclaredIn>
+			<DeclaredIn>SLPanningTableViewCell.h</DeclaredIn>
 			
 			<NodeRef refid="1"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/SLPanningCell/setDelegate:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/SLPanningTableViewCell/setDelegate:</TokenIdentifier>
 			<Abstract type="html">The cell&apos;s delegate</Abstract>
-			<DeclaredIn>SLPanningCell.h</DeclaredIn>			
+			<DeclaredIn>SLPanningTableViewCell.h</DeclaredIn>			
 			
-	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/intf/SLPanningCellDelegate</TokenIdentifier>
-		
-	</RelatedTokens>
-	
-			<Declaration>@property (nonatomic) id&lt;SLPanningCellDelegate&gt; delegate</Declaration>
+			<Declaration>@property (nonatomic) id&lt;SLPanningTableViewCellDelegate&gt; delegate</Declaration>
 			
 			
 			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="1"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/SLPanningCell/delegate</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/SLPanningTableViewCell/delegate</TokenIdentifier>
 			<Abstract type="html">The cell&apos;s delegate</Abstract>
-			<DeclaredIn>SLPanningCell.h</DeclaredIn>			
+			<DeclaredIn>SLPanningTableViewCell.h</DeclaredIn>			
 			
-	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/intf/SLPanningCellDelegate</TokenIdentifier>
-		
-	</RelatedTokens>
-	
-			<Declaration>@property (nonatomic) id&lt;SLPanningCellDelegate&gt; delegate</Declaration>
+			<Declaration>@property (nonatomic) id&lt;SLPanningTableViewCellDelegate&gt; delegate</Declaration>
 			
 			
 			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="1"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/SLPanningCell/setDirection:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instp/SLPanningTableViewCell/delegate</TokenIdentifier>
+			<Abstract type="html">The cell&apos;s delegate</Abstract>
+			<DeclaredIn>SLPanningTableViewCell.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) id&lt;SLPanningTableViewCellDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SLPanningTableViewCell/setDirection:</TokenIdentifier>
 			<Abstract type="html">The direction the cell is allowed to pan</Abstract>
-			<DeclaredIn>SLPanningCell.h</DeclaredIn>			
+			<DeclaredIn>SLPanningTableViewCell.h</DeclaredIn>			
 			
 			<Declaration>@property (nonatomic) SLPanningTableViewCellDirection direction</Declaration>
 			
 			
 			<Anchor>//api/name/direction</Anchor>
+            <NodeRef refid="1"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/SLPanningCell/direction</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/SLPanningTableViewCell/direction</TokenIdentifier>
 			<Abstract type="html">The direction the cell is allowed to pan</Abstract>
-			<DeclaredIn>SLPanningCell.h</DeclaredIn>			
+			<DeclaredIn>SLPanningTableViewCell.h</DeclaredIn>			
 			
 			<Declaration>@property (nonatomic) SLPanningTableViewCellDirection direction</Declaration>
 			
 			
 			<Anchor>//api/name/direction</Anchor>
+            <NodeRef refid="1"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/SLPanningCell/setState:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instp/SLPanningTableViewCell/direction</TokenIdentifier>
+			<Abstract type="html">The direction the cell is allowed to pan</Abstract>
+			<DeclaredIn>SLPanningTableViewCell.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) SLPanningTableViewCellDirection direction</Declaration>
+			
+			
+			<Anchor>//api/name/direction</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SLPanningTableViewCell/setState:</TokenIdentifier>
 			<Abstract type="html">Change the cell&apos;s state programmatically.</Abstract>
-			<DeclaredIn>SLPanningCell.h</DeclaredIn>			
+			<DeclaredIn>SLPanningTableViewCell.h</DeclaredIn>			
 			
 			<Declaration>- (void)setState:(SLPanningTableViewCellState)newState</Declaration>
 			<Parameters>
@@ -80,6 +98,7 @@ its content view.</Abstract>
 			</Parameters>
 			
 			<Anchor>//api/name/setState:</Anchor>
+            <NodeRef refid="1"/>
 		</Token>
 		
 	</File>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/SLPanningTableViewCellDelegate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/SLPanningTableViewCellDelegate</TokenIdentifier>
+			<Abstract type="html">Classes that conform to SLPanningCellDelegate may receive messages about the
+state of panning cells.</Abstract>
+			<DeclaredIn>SLPanningTableViewCell.h</DeclaredIn>
+			
+			<NodeRef refid="3"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SLPanningTableViewCellDelegate/cellWillPanOpen:</TokenIdentifier>
+			<Abstract type="html">Fires when the cell is about to start its animation towards being open.</Abstract>
+			<DeclaredIn>SLPanningTableViewCell.h</DeclaredIn>			
+			
+			<Declaration>- (void)cellWillPanOpen:(SLPanningTableViewCell *)cell</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>cell</Name>
+					<Abstract type="html">The cell</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/cellWillPanOpen:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SLPanningTableViewCellDelegate/cellDidPanOpen:</TokenIdentifier>
+			<Abstract type="html">Fires when the cell has completed its animation towards being open.</Abstract>
+			<DeclaredIn>SLPanningTableViewCell.h</DeclaredIn>			
+			
+			<Declaration>- (void)cellDidPanOpen:(SLPanningTableViewCell *)cell</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>cell</Name>
+					<Abstract type="html">The cell</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/cellDidPanOpen:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SLPanningTableViewCellDelegate/cellWillPanClosed:</TokenIdentifier>
+			<Abstract type="html">Fires when the cell is about to start its animation towards being closed.</Abstract>
+			<DeclaredIn>SLPanningTableViewCell.h</DeclaredIn>			
+			
+			<Declaration>- (void)cellWillPanClosed:(SLPanningTableViewCell *)cell</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>cell</Name>
+					<Abstract type="html">The cell</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/cellWillPanClosed:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SLPanningTableViewCellDelegate/cellDidPanClosed:</TokenIdentifier>
+			<Abstract type="html">Fires when the cell has completed its animation towards being closed.</Abstract>
+			<DeclaredIn>SLPanningTableViewCell.h</DeclaredIn>			
+			
+			<Declaration>- (void)cellDidPanClosed:(SLPanningTableViewCell *)cell</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>cell</Name>
+					<Abstract type="html">The cell</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/cellDidPanClosed:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+	</File>
+</Tokens>

@@ -7,18 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		09499C281708B51700FD1F81 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09499C271708B51700FD1F81 /* UIKit.framework */; };
-		09499C2A1708B51700FD1F81 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09499C291708B51700FD1F81 /* Foundation.framework */; };
-		09499C2C1708B51700FD1F81 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09499C2B1708B51700FD1F81 /* CoreGraphics.framework */; };
-		09499C321708B51700FD1F81 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 09499C301708B51700FD1F81 /* InfoPlist.strings */; };
-		09499C341708B51700FD1F81 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 09499C331708B51700FD1F81 /* main.m */; };
-		09499C381708B51700FD1F81 /* SLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 09499C371708B51700FD1F81 /* SLAppDelegate.m */; };
-		09499C3A1708B51700FD1F81 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 09499C391708B51700FD1F81 /* Default.png */; };
-		09499C3C1708B51700FD1F81 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09499C3B1708B51700FD1F81 /* Default@2x.png */; };
-		09499C3E1708B51700FD1F81 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09499C3D1708B51700FD1F81 /* Default-568h@2x.png */; };
-		09499C411708B51700FD1F81 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09499C3F1708B51700FD1F81 /* MainStoryboard.storyboard */; };
-		09499C4F1708B53800FD1F81 /* SLTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09499C4E1708B53800FD1F81 /* SLTableViewController.m */; };
-		09499C521708B54C00FD1F81 /* SLPanningCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 09499C511708B54C00FD1F81 /* SLPanningCell.m */; };
+		091326901729E31E00FA79A5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09499C291708B51700FD1F81 /* Foundation.framework */; };
+		091326971729E31E00FA79A5 /* SLPanningTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 091326961729E31E00FA79A5 /* SLPanningTableViewCell.m */; };
+		0913269B1729E33900FA79A5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09499C271708B51700FD1F81 /* UIKit.framework */; };
+		0913269C1729E33E00FA79A5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09499C2B1708B51700FD1F81 /* CoreGraphics.framework */; };
+		0913269E1729E38300FA79A5 /* SLPanningTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 091326941729E31E00FA79A5 /* SLPanningTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		09499C5B1708B86900FD1F81 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 09499C5A1708B86900FD1F81 /* main.c */; };
 		09499C5D1708B86900FD1F81 /* Documentation.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09499C5C1708B86900FD1F81 /* Documentation.1 */; };
 /* End PBXBuildFile section */
@@ -37,37 +30,26 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		09499C241708B51700FD1F81 /* SLPanningTableViewCell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SLPanningTableViewCell.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0913268F1729E31E00FA79A5 /* libSLPanningTableViewCell.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSLPanningTableViewCell.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		091326941729E31E00FA79A5 /* SLPanningTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLPanningTableViewCell.h; sourceTree = "<group>"; };
+		091326961729E31E00FA79A5 /* SLPanningTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLPanningTableViewCell.m; sourceTree = "<group>"; };
 		09499C271708B51700FD1F81 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		09499C291708B51700FD1F81 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		09499C2B1708B51700FD1F81 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		09499C2F1708B51700FD1F81 /* SLPanningTableViewCell-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SLPanningTableViewCell-Info.plist"; sourceTree = "<group>"; };
-		09499C311708B51700FD1F81 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		09499C331708B51700FD1F81 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		09499C351708B51700FD1F81 /* SLPanningTableViewCell-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SLPanningTableViewCell-Prefix.pch"; sourceTree = "<group>"; };
-		09499C361708B51700FD1F81 /* SLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLAppDelegate.h; sourceTree = "<group>"; };
-		09499C371708B51700FD1F81 /* SLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLAppDelegate.m; sourceTree = "<group>"; };
-		09499C391708B51700FD1F81 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		09499C3B1708B51700FD1F81 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		09499C3D1708B51700FD1F81 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		09499C401708B51700FD1F81 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		09499C4D1708B53800FD1F81 /* SLTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLTableViewController.h; sourceTree = "<group>"; };
-		09499C4E1708B53800FD1F81 /* SLTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLTableViewController.m; sourceTree = "<group>"; };
-		09499C501708B54C00FD1F81 /* SLPanningCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLPanningCell.h; sourceTree = "<group>"; };
-		09499C511708B54C00FD1F81 /* SLPanningCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLPanningCell.m; sourceTree = "<group>"; };
 		09499C581708B86900FD1F81 /* Documentation */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Documentation; sourceTree = BUILT_PRODUCTS_DIR; };
 		09499C5A1708B86900FD1F81 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		09499C5C1708B86900FD1F81 /* Documentation.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Documentation.1; sourceTree = "<group>"; };
+		09EB576F1729E4EB007D2381 /* SLPanningTableViewCell-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SLPanningTableViewCell-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		09499C211708B51700FD1F81 /* Frameworks */ = {
+		0913268C1729E31E00FA79A5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09499C281708B51700FD1F81 /* UIKit.framework in Frameworks */,
-				09499C2A1708B51700FD1F81 /* Foundation.framework in Frameworks */,
-				09499C2C1708B51700FD1F81 /* CoreGraphics.framework in Frameworks */,
+				0913269C1729E33E00FA79A5 /* CoreGraphics.framework in Frameworks */,
+				0913269B1729E33900FA79A5 /* UIKit.framework in Frameworks */,
+				091326901729E31E00FA79A5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,11 +63,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		091326911729E31E00FA79A5 /* SLPanningTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				091326941729E31E00FA79A5 /* SLPanningTableViewCell.h */,
+				091326961729E31E00FA79A5 /* SLPanningTableViewCell.m */,
+				09EB576F1729E4EB007D2381 /* SLPanningTableViewCell-Prefix.pch */,
+			);
+			path = SLPanningTableViewCell;
+			sourceTree = "<group>";
+		};
 		09499C1B1708B51700FD1F81 = {
 			isa = PBXGroup;
 			children = (
-				09499C2D1708B51700FD1F81 /* SLPanningTableViewCell */,
 				09499C591708B86900FD1F81 /* Documentation */,
+				091326911729E31E00FA79A5 /* SLPanningTableViewCell */,
 				09499C261708B51700FD1F81 /* Frameworks */,
 				09499C251708B51700FD1F81 /* Products */,
 			);
@@ -94,8 +86,8 @@
 		09499C251708B51700FD1F81 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				09499C241708B51700FD1F81 /* SLPanningTableViewCell.app */,
 				09499C581708B86900FD1F81 /* Documentation */,
+				0913268F1729E31E00FA79A5 /* libSLPanningTableViewCell.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -110,35 +102,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		09499C2D1708B51700FD1F81 /* SLPanningTableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				09499C361708B51700FD1F81 /* SLAppDelegate.h */,
-				09499C371708B51700FD1F81 /* SLAppDelegate.m */,
-				09499C3F1708B51700FD1F81 /* MainStoryboard.storyboard */,
-				09499C2E1708B51700FD1F81 /* Supporting Files */,
-				09499C4D1708B53800FD1F81 /* SLTableViewController.h */,
-				09499C4E1708B53800FD1F81 /* SLTableViewController.m */,
-				09499C501708B54C00FD1F81 /* SLPanningCell.h */,
-				09499C511708B54C00FD1F81 /* SLPanningCell.m */,
-			);
-			path = SLPanningTableViewCell;
-			sourceTree = "<group>";
-		};
-		09499C2E1708B51700FD1F81 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				09499C2F1708B51700FD1F81 /* SLPanningTableViewCell-Info.plist */,
-				09499C301708B51700FD1F81 /* InfoPlist.strings */,
-				09499C331708B51700FD1F81 /* main.m */,
-				09499C351708B51700FD1F81 /* SLPanningTableViewCell-Prefix.pch */,
-				09499C391708B51700FD1F81 /* Default.png */,
-				09499C3B1708B51700FD1F81 /* Default@2x.png */,
-				09499C3D1708B51700FD1F81 /* Default-568h@2x.png */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		09499C591708B86900FD1F81 /* Documentation */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,14 +113,25 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		0913269D1729E34200FA79A5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0913269E1729E38300FA79A5 /* SLPanningTableViewCell.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		09499C231708B51700FD1F81 /* SLPanningTableViewCell */ = {
+		0913268E1729E31E00FA79A5 /* SLPanningTableViewCell */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 09499C4A1708B51700FD1F81 /* Build configuration list for PBXNativeTarget "SLPanningTableViewCell" */;
+			buildConfigurationList = 0913269A1729E31E00FA79A5 /* Build configuration list for PBXNativeTarget "SLPanningTableViewCell" */;
 			buildPhases = (
-				09499C201708B51700FD1F81 /* Sources */,
-				09499C211708B51700FD1F81 /* Frameworks */,
-				09499C221708B51700FD1F81 /* Resources */,
+				0913268B1729E31E00FA79A5 /* Sources */,
+				0913268C1729E31E00FA79A5 /* Frameworks */,
+				0913269D1729E34200FA79A5 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -165,8 +139,8 @@
 			);
 			name = SLPanningTableViewCell;
 			productName = SLPanningTableViewCell;
-			productReference = 09499C241708B51700FD1F81 /* SLPanningTableViewCell.app */;
-			productType = "com.apple.product-type.application";
+			productReference = 0913268F1729E31E00FA79A5 /* libSLPanningTableViewCell.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 		09499C571708B86900FD1F81 /* Documentation */ = {
 			isa = PBXNativeTarget;
@@ -208,26 +182,11 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				09499C231708B51700FD1F81 /* SLPanningTableViewCell */,
 				09499C571708B86900FD1F81 /* Documentation */,
+				0913268E1729E31E00FA79A5 /* SLPanningTableViewCell */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		09499C221708B51700FD1F81 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				09499C321708B51700FD1F81 /* InfoPlist.strings in Resources */,
-				09499C3A1708B51700FD1F81 /* Default.png in Resources */,
-				09499C3C1708B51700FD1F81 /* Default@2x.png in Resources */,
-				09499C3E1708B51700FD1F81 /* Default-568h@2x.png in Resources */,
-				09499C411708B51700FD1F81 /* MainStoryboard.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		09499C611708B87600FD1F81 /* ShellScript */ = {
@@ -241,19 +200,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/appledoc \\\n--project-name SLPanningTableViewCell \\\n--project-company spilliams \\\n--company-id com.spilliams \\\n--logformat xcode \\\n--keep-undocumented-objects \\\n--keep-undocumented-members \\\n--keep-intermediate-files \\\n--no-repeat-first-par \\\n--no-warn-invalid-crossref \\\n--ignore .m \\\n--ignore Documentation \\\n--ignore AppDelegate.h \\\n--ignore SLTableViewController.h \\\n--output \"${PROJECT_DIR}/Documentation\" \\\n\"${PROJECT_DIR}\"";
+			shellScript = "/usr/local/bin/appledoc \\\n--project-name SLPanningTableViewCell \\\n--project-company spilliams \\\n--company-id com.spilliams \\\n--logformat xcode \\\n--keep-undocumented-objects \\\n--keep-undocumented-members \\\n--keep-intermediate-files \\\n--no-repeat-first-par \\\n--no-warn-invalid-crossref \\\n--ignore .m \\\n--ignore Documentation \\\n--ignore AppDelegate.h \\\n--output \"${PROJECT_DIR}/Documentation\" \\\n\"${PROJECT_DIR}\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		09499C201708B51700FD1F81 /* Sources */ = {
+		0913268B1729E31E00FA79A5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09499C341708B51700FD1F81 /* main.m in Sources */,
-				09499C381708B51700FD1F81 /* SLAppDelegate.m in Sources */,
-				09499C4F1708B53800FD1F81 /* SLTableViewController.m in Sources */,
-				09499C521708B54C00FD1F81 /* SLPanningCell.m in Sources */,
+				091326971729E31E00FA79A5 /* SLPanningTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,26 +223,31 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		09499C301708B51700FD1F81 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				09499C311708B51700FD1F81 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		09499C3F1708B51700FD1F81 /* MainStoryboard.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				09499C401708B51700FD1F81 /* en */,
-			);
-			name = MainStoryboard.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
+		091326981729E31E00FA79A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/SLPanningTableViewCell.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SLPanningTableViewCell/SLPanningTableViewCell-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		091326991729E31E00FA79A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/SLPanningTableViewCell.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SLPanningTableViewCell/SLPanningTableViewCell-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		09499C481708B51700FD1F81 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -345,30 +306,6 @@
 			};
 			name = Release;
 		};
-		09499C4B1708B51700FD1F81 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SLPanningTableViewCell/SLPanningTableViewCell-Prefix.pch";
-				INFOPLIST_FILE = "SLPanningTableViewCell/SLPanningTableViewCell-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		09499C4C1708B51700FD1F81 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SLPanningTableViewCell/SLPanningTableViewCell-Prefix.pch";
-				INFOPLIST_FILE = "SLPanningTableViewCell/SLPanningTableViewCell-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
 		09499C5F1708B86900FD1F81 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -397,20 +334,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0913269A1729E31E00FA79A5 /* Build configuration list for PBXNativeTarget "SLPanningTableViewCell" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				091326981729E31E00FA79A5 /* Debug */,
+				091326991729E31E00FA79A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		09499C1F1708B51700FD1F81 /* Build configuration list for PBXProject "SLPanningTableViewCell" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				09499C481708B51700FD1F81 /* Debug */,
 				09499C491708B51700FD1F81 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		09499C4A1708B51700FD1F81 /* Build configuration list for PBXNativeTarget "SLPanningTableViewCell" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				09499C4B1708B51700FD1F81 /* Debug */,
-				09499C4C1708B51700FD1F81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -422,6 +359,7 @@
 				09499C601708B86900FD1F81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

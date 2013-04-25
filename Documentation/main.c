@@ -2,8 +2,8 @@
 //  main.c
 //  Documentation
 //
-//  Created by Spencer Williams on 3/31/13.
-//  Copyright (c) 2013 spilliams. All rights reserved.
+//  Created by Spencer Williams on 4/25/13.
+//  Copyright (c) 2013 Spencer Williams. All rights reserved.
 //
 
 #include <stdio.h>
