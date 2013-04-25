@@ -1,3 +1,7 @@
+**UPDATE**: The version in `master` branch is old and poorly-written. Proceed at your own risk. A newer version is in development in branch `v2`. I am no longer supporting this branch, and it will be trimmed as soon as `v2` works. I will still respond to the easier Issues, but anything asking aobut improvements or fixes will likely be ignored.
+
+---
+
 Disclaimer: I recently had to figure all this stuff out on my own, and I ventured down many blind alleys before stumbling on this solution. My aim is to document my progress so that others may spend less time following in my footsteps and more time forging ahead. Cheers!
 
 ------------
