@@ -74,7 +74,8 @@
 {
     SLPanningTableViewCellState oldState = _panState;
     _panState = panState;
-    if (self.delegate &&
+    if (oldState != panState &&
+        self.delegate &&
         [self.delegate conformsToProtocol:@protocol(SLPanningTableViewCellDelegate)] &&
         [self.delegate respondsToSelector:@selector(cell:changedFromState:toState:)]) {
         [self.delegate cell:self changedFromState:oldState toState:panState];

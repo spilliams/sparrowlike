@@ -17,7 +17,6 @@
 		091326511729E1B700FA79A5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 091326501729E1B700FA79A5 /* Default-568h@2x.png */; };
 		091326641729E1F000FA79A5 /* SLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 091326611729E1F000FA79A5 /* SLAppDelegate.m */; };
 		091326691729E1FF00FA79A5 /* Sparrowlike-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 091326681729E1FF00FA79A5 /* Sparrowlike-Info.plist */; };
-		0913266E1729E21800FA79A5 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0913266A1729E21800FA79A5 /* MainStoryboard_iPad.storyboard */; };
 		0913266F1729E21800FA79A5 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0913266C1729E21800FA79A5 /* MainStoryboard_iPhone.storyboard */; };
 		09EB57801729E67C007D2381 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 09EB577F1729E67C007D2381 /* main.c */; };
 		09EB57821729E67C007D2381 /* Documentation.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09EB57811729E67C007D2381 /* Documentation.1 */; };
@@ -77,7 +76,6 @@
 		091326601729E1F000FA79A5 /* SLAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLAppDelegate.h; sourceTree = "<group>"; };
 		091326611729E1F000FA79A5 /* SLAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLAppDelegate.m; sourceTree = "<group>"; };
 		091326681729E1FF00FA79A5 /* Sparrowlike-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Sparrowlike-Info.plist"; sourceTree = "<group>"; };
-		0913266B1729E21800FA79A5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		0913266D1729E21800FA79A5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		091326701729E23E00FA79A5 /* SLPanningTableViewCell.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SLPanningTableViewCell.xcodeproj; sourceTree = "<group>"; };
 		09EB577D1729E67C007D2381 /* Documentation */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Documentation; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,7 +144,6 @@
 			children = (
 				091326601729E1F000FA79A5 /* SLAppDelegate.h */,
 				091326611729E1F000FA79A5 /* SLAppDelegate.m */,
-				0913266A1729E21800FA79A5 /* MainStoryboard_iPad.storyboard */,
 				0913266C1729E21800FA79A5 /* MainStoryboard_iPhone.storyboard */,
 				091326411729E1B600FA79A5 /* Supporting Files */,
 				09EB57871729E85C007D2381 /* SLTableViewController.h */,
@@ -289,7 +286,6 @@
 				0913264F1729E1B700FA79A5 /* Default@2x.png in Resources */,
 				091326511729E1B700FA79A5 /* Default-568h@2x.png in Resources */,
 				091326691729E1FF00FA79A5 /* Sparrowlike-Info.plist in Resources */,
-				0913266E1729E21800FA79A5 /* MainStoryboard_iPad.storyboard in Resources */,
 				0913266F1729E21800FA79A5 /* MainStoryboard_iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -349,14 +345,6 @@
 				091326441729E1B600FA79A5 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		0913266A1729E21800FA79A5 /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0913266B1729E21800FA79A5 /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		0913266C1729E21800FA79A5 /* MainStoryboard_iPhone.storyboard */ = {
@@ -437,6 +425,7 @@
 				INFOPLIST_FILE = "Sparrowlike/Sparrowlike-Info.plist";
 				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -450,6 +439,7 @@
 				INFOPLIST_FILE = "Sparrowlike/Sparrowlike-Info.plist";
 				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

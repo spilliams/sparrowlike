@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SLTableViewController : UITableViewController
+@protocol SLPanningTableViewCellDelegate;
+
+@interface SLTableViewController : UITableViewController <SLPanningTableViewCellDelegate>
 
 @end
