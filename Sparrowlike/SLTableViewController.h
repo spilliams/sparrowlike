@@ -1,5 +1,5 @@
 //
-//  SLViewController.h
+//  SLTableViewController.h
 //  Sparrowlike
 //
 //  Created by Spencer Williams on 4/25/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SLViewController : UIViewController
+@interface SLTableViewController : UITableViewController
 
 @end

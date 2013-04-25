@@ -16,14 +16,14 @@
 		0913264F1729E1B700FA79A5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0913264E1729E1B700FA79A5 /* Default@2x.png */; };
 		091326511729E1B700FA79A5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 091326501729E1B700FA79A5 /* Default-568h@2x.png */; };
 		091326641729E1F000FA79A5 /* SLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 091326611729E1F000FA79A5 /* SLAppDelegate.m */; };
-		091326651729E1F000FA79A5 /* SLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 091326631729E1F000FA79A5 /* SLViewController.m */; };
 		091326691729E1FF00FA79A5 /* Sparrowlike-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 091326681729E1FF00FA79A5 /* Sparrowlike-Info.plist */; };
 		0913266E1729E21800FA79A5 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0913266A1729E21800FA79A5 /* MainStoryboard_iPad.storyboard */; };
 		0913266F1729E21800FA79A5 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0913266C1729E21800FA79A5 /* MainStoryboard_iPhone.storyboard */; };
-		091326801729E2FE00FA79A5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0913263C1729E1B600FA79A5 /* Foundation.framework */; };
-		09EB57781729E5D2007D2381 /* libSLPanningTableViewCell.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0913267F1729E2FE00FA79A5 /* libSLPanningTableViewCell.a */; };
 		09EB57801729E67C007D2381 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 09EB577F1729E67C007D2381 /* main.c */; };
 		09EB57821729E67C007D2381 /* Documentation.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09EB57811729E67C007D2381 /* Documentation.1 */; };
+		09EB57891729E85C007D2381 /* SLTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EB57881729E85C007D2381 /* SLTableViewController.m */; };
+		09EB578C1729E887007D2381 /* SLTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EB578B1729E887007D2381 /* SLTableViewCell.m */; };
+		09EB578F1729E91E007D2381 /* libSLPanningTableViewCell.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09EB57751729E5C3007D2381 /* libSLPanningTableViewCell.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +41,7 @@
 			remoteGlobalIDString = 0913268F1729E31E00FA79A5;
 			remoteInfo = SLPanningTableViewCell;
 		};
-		09EB57761729E5CD007D2381 /* PBXContainerItemProxy */ = {
+		09EB578D1729E918007D2381 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 091326701729E23E00FA79A5 /* SLPanningTableViewCell.xcodeproj */;
 			proxyType = 1;
@@ -51,15 +51,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		0913267D1729E2FE00FA79A5 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/${PRODUCT_NAME}";
-			dstSubfolderSpec = 16;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		09EB577B1729E67C007D2381 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -85,16 +76,17 @@
 		091326501729E1B700FA79A5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		091326601729E1F000FA79A5 /* SLAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLAppDelegate.h; sourceTree = "<group>"; };
 		091326611729E1F000FA79A5 /* SLAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLAppDelegate.m; sourceTree = "<group>"; };
-		091326621729E1F000FA79A5 /* SLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLViewController.h; sourceTree = "<group>"; };
-		091326631729E1F000FA79A5 /* SLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLViewController.m; sourceTree = "<group>"; };
 		091326681729E1FF00FA79A5 /* Sparrowlike-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Sparrowlike-Info.plist"; sourceTree = "<group>"; };
 		0913266B1729E21800FA79A5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		0913266D1729E21800FA79A5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		091326701729E23E00FA79A5 /* SLPanningTableViewCell.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SLPanningTableViewCell.xcodeproj; sourceTree = "<group>"; };
-		0913267F1729E2FE00FA79A5 /* libSLPanningTableViewCell.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSLPanningTableViewCell.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		09EB577D1729E67C007D2381 /* Documentation */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Documentation; sourceTree = BUILT_PRODUCTS_DIR; };
 		09EB577F1729E67C007D2381 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		09EB57811729E67C007D2381 /* Documentation.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Documentation.1; sourceTree = "<group>"; };
+		09EB57871729E85C007D2381 /* SLTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLTableViewController.h; sourceTree = "<group>"; };
+		09EB57881729E85C007D2381 /* SLTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLTableViewController.m; sourceTree = "<group>"; };
+		09EB578A1729E887007D2381 /* SLTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLTableViewCell.h; sourceTree = "<group>"; };
+		09EB578B1729E887007D2381 /* SLTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,18 +94,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09EB57781729E5D2007D2381 /* libSLPanningTableViewCell.a in Frameworks */,
+				09EB578F1729E91E007D2381 /* libSLPanningTableViewCell.a in Frameworks */,
 				0913263B1729E1B600FA79A5 /* UIKit.framework in Frameworks */,
 				0913263D1729E1B600FA79A5 /* Foundation.framework in Frameworks */,
 				0913263F1729E1B600FA79A5 /* CoreGraphics.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0913267C1729E2FE00FA79A5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				091326801729E2FE00FA79A5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,7 +125,6 @@
 			isa = PBXGroup;
 			children = (
 				091326371729E1B600FA79A5 /* Sparrowlike.app */,
-				0913267F1729E2FE00FA79A5 /* libSLPanningTableViewCell.a */,
 				09EB577D1729E67C007D2381 /* Documentation */,
 			);
 			name = Products;
@@ -163,11 +146,13 @@
 			children = (
 				091326601729E1F000FA79A5 /* SLAppDelegate.h */,
 				091326611729E1F000FA79A5 /* SLAppDelegate.m */,
-				091326621729E1F000FA79A5 /* SLViewController.h */,
-				091326631729E1F000FA79A5 /* SLViewController.m */,
 				0913266A1729E21800FA79A5 /* MainStoryboard_iPad.storyboard */,
 				0913266C1729E21800FA79A5 /* MainStoryboard_iPhone.storyboard */,
 				091326411729E1B600FA79A5 /* Supporting Files */,
+				09EB57871729E85C007D2381 /* SLTableViewController.h */,
+				09EB57881729E85C007D2381 /* SLTableViewController.m */,
+				09EB578A1729E887007D2381 /* SLTableViewCell.h */,
+				09EB578B1729E887007D2381 /* SLTableViewCell.m */,
 			);
 			path = Sparrowlike;
 			sourceTree = "<group>";
@@ -218,29 +203,12 @@
 			buildRules = (
 			);
 			dependencies = (
-				09EB57771729E5CD007D2381 /* PBXTargetDependency */,
+				09EB578E1729E918007D2381 /* PBXTargetDependency */,
 			);
 			name = Sparrowlike;
 			productName = Sparrowlike;
 			productReference = 091326371729E1B600FA79A5 /* Sparrowlike.app */;
 			productType = "com.apple.product-type.application";
-		};
-		0913267E1729E2FE00FA79A5 /* SLPanningTableViewCell */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 091326881729E2FE00FA79A5 /* Build configuration list for PBXNativeTarget "SLPanningTableViewCell" */;
-			buildPhases = (
-				0913267B1729E2FE00FA79A5 /* Sources */,
-				0913267C1729E2FE00FA79A5 /* Frameworks */,
-				0913267D1729E2FE00FA79A5 /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = SLPanningTableViewCell;
-			productName = SLPanningTableViewCell;
-			productReference = 0913267F1729E2FE00FA79A5 /* libSLPanningTableViewCell.a */;
-			productType = "com.apple.product-type.library.static";
 		};
 		09EB577C1729E67C007D2381 /* Documentation */ = {
 			isa = PBXNativeTarget;
@@ -289,7 +257,6 @@
 			projectRoot = "";
 			targets = (
 				091326361729E1B600FA79A5 /* Sparrowlike */,
-				0913267E1729E2FE00FA79A5 /* SLPanningTableViewCell */,
 				09EB577C1729E67C007D2381 /* Documentation */,
 			);
 		};
@@ -352,14 +319,8 @@
 			files = (
 				091326471729E1B600FA79A5 /* main.m in Sources */,
 				091326641729E1F000FA79A5 /* SLAppDelegate.m in Sources */,
-				091326651729E1F000FA79A5 /* SLViewController.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0913267B1729E2FE00FA79A5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				09EB57891729E85C007D2381 /* SLTableViewController.m in Sources */,
+				09EB578C1729E887007D2381 /* SLTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,10 +335,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		09EB57771729E5CD007D2381 /* PBXTargetDependency */ = {
+		09EB578E1729E918007D2381 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SLPanningTableViewCell;
-			targetProxy = 09EB57761729E5CD007D2381 /* PBXContainerItemProxy */;
+			targetProxy = 09EB578D1729E918007D2381 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -474,6 +435,7 @@
 				GCC_PREFIX_HEADER = "Sparrowlike/Sparrowlike-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/SLPanningTableViewCell\"/**";
 				INFOPLIST_FILE = "Sparrowlike/Sparrowlike-Info.plist";
+				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -486,32 +448,9 @@
 				GCC_PREFIX_HEADER = "Sparrowlike/Sparrowlike-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/SLPanningTableViewCell\"/**";
 				INFOPLIST_FILE = "Sparrowlike/Sparrowlike-Info.plist";
+				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		091326891729E2FE00FA79A5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DSTROOT = /tmp/SLPanningTableViewCell.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SLPanningTableViewCell/SLPanningTableViewCell-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		0913268A1729E2FE00FA79A5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DSTROOT = /tmp/SLPanningTableViewCell.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SLPanningTableViewCell/SLPanningTableViewCell-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -557,15 +496,6 @@
 			buildConfigurations = (
 				0913265E1729E1B700FA79A5 /* Debug */,
 				0913265F1729E1B700FA79A5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		091326881729E2FE00FA79A5 /* Build configuration list for PBXNativeTarget "SLPanningTableViewCell" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				091326891729E2FE00FA79A5 /* Debug */,
-				0913268A1729E2FE00FA79A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
