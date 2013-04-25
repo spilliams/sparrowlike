@@ -77,9 +77,11 @@
 
 - (void)cell:(SLPanningTableViewCell *)cell changedFromState:(SLPanningTableViewCellState)oldState toState:(SLPanningTableViewCellState)newState
 {
-    NSLog(@"cell changed from state %d to state %d",
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+    NSLog(@"cell [%d,%d] changed from state %d to state %d",
+          indexPath.section,
+          indexPath.row,
           oldState,
           newState);
 }
-
 @end

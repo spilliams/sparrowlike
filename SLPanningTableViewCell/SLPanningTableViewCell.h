@@ -29,7 +29,7 @@ typedef enum {
  
  It may send messages to its delegate about its state.
  */
-@interface SLPanningTableViewCell : UITableViewCell
+@interface SLPanningTableViewCell : UITableViewCell <UIGestureRecognizerDelegate>
 /// The cell's delegate
 /// @see SLPanningCellDelegate
 @property (nonatomic) id<SLPanningTableViewCellDelegate> delegate;

@@ -10,11 +10,24 @@
 
 @interface SLPanningTableViewCell ()
 @property (nonatomic) SLPanningTableViewCellState panState;
+@property (nonatomic, strong) UIPanGestureRecognizer *panGR;
+- (void)handlePanGestureRecognizer:(UIPanGestureRecognizer *)panGR;
 @end
 
 @implementation SLPanningTableViewCell
 
 #pragma mark - Cell Lifecycle
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    if (self = [super initWithCoder:aDecoder]) {
+        self.panGR = [[UIPanGestureRecognizer alloc] initWithTarget:self
+                                                             action:@selector(handlePanGestureRecognizer:)];
+        [self.panGR setDelegate:self];
+        [self addGestureRecognizer:self.panGR];
+    }
+    return self;
+}
 
 - (void)awakeFromNib
 {
@@ -34,6 +47,19 @@
 {
     [self setState:SLPanningTableViewCellStateClosed];
     [super prepareForReuse];
+}
+
+#pragma mark - UIGestureRecognizerDelegate
+
+//- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
+//- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
+//- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
+
+#pragma mark - Private
+
+- (void)handlePanGestureRecognizer:(UIPanGestureRecognizer *)panGR
+{
+    
 }
 
 #pragma mark - Public API
