@@ -122,6 +122,7 @@
     float threshold = (PAN_OPEN_X+PAN_CLOSED_X)/2.0;
     float vX = 0.0;
     float compare;
+    float finalX;
     NSIndexPath *indexPath = [self.tableView indexPathForCell:(CustomCell *)[panGestureRecognizer view] ];
     UIView *view = ((CustomCell *)panGestureRecognizer.view).frontView;
     
@@ -137,21 +138,25 @@
             vX = (FAST_ANIMATION_DURATION/2.0)*[panGestureRecognizer velocityInView:self.view].x;
             compare = view.transform.tx + vX;
             if (compare > threshold) {
-                [self snapView:view toX:PAN_CLOSED_X animated:YES];
-                [self setOpenCellIndexPath:nil];
+                finalX = MAX(PAN_OPEN_X,PAN_CLOSED_X);
                 [self setOpenCellLastTX:0];
             } else {
-                [self snapView:view toX:PAN_OPEN_X animated:YES];
-                [self setOpenCellIndexPath:[self.tableView indexPathForCell:(CustomCell *)panGestureRecognizer.view] ];
+                finalX = MIN(PAN_OPEN_X,PAN_CLOSED_X);
                 [self setOpenCellLastTX:view.transform.tx];
+            }
+            [self snapView:view toX:finalX animated:YES];
+            if (finalX == PAN_CLOSED_X) {
+                [self setOpenCellIndexPath:nil];
+            } else {
+                [self setOpenCellIndexPath:[self.tableView indexPathForCell:(CustomCell *)panGestureRecognizer.view]];
             }
             break;
         case UIGestureRecognizerStateChanged:
             compare = self.openCellLastTX+[panGestureRecognizer translationInView:self.view].x;
-            if (compare > PAN_CLOSED_X)
-                compare = PAN_CLOSED_X;
-            else if (compare < PAN_OPEN_X)
-                compare = PAN_OPEN_X;
+            if (compare > MAX(PAN_OPEN_X,PAN_CLOSED_X))
+                compare = MAX(PAN_OPEN_X,PAN_CLOSED_X);
+            else if (compare < MIN(PAN_OPEN_X,PAN_CLOSED_X))
+                compare = MIN(PAN_OPEN_X,PAN_CLOSED_X);
             [view setTransform:CGAffineTransformMakeTranslation(compare, 0)];
             break;
         default:
