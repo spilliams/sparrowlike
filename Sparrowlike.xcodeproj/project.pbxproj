@@ -507,6 +507,7 @@
 				09EB57851729E67C007D2381 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

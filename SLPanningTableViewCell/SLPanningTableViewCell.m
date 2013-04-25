@@ -8,6 +8,10 @@
 
 #import "SLPanningTableViewCell.h"
 
+@interface SLPanningTableViewCell ()
+@property (nonatomic) SLPanningTableViewCellState panState;
+@end
+
 @implementation SLPanningTableViewCell
 
 #pragma mark - Cell Lifecycle
@@ -36,14 +40,19 @@
 
 - (void)setState:(SLPanningTableViewCellState)newState
 {
+    if (newState == SLPanningTableViewCellStateTransitory) {
+        // not a feature, not a bug.
+        return;
+    }
+    
     NSString *newStateString = @"Open";
     if (newState == SLPanningTableViewCellStateClosed) {
         newStateString = @"Closed";
     }
-    BOOL delegateConforms = self.delegate && [self.delegate conformsToProtocol:@protocol(SLPanningTableViewCellDelegate)];
+    BOOL delegateExistsAndConforms = self.delegate && [self.delegate conformsToProtocol:@protocol(SLPanningTableViewCellDelegate)];
     
     SEL willSelector = NSSelectorFromString([NSString stringWithFormat:@"cellWillPan%@",newStateString]);
-    if (delegateConforms &&
+    if (delegateExistsAndConforms &&
         [self.delegate respondsToSelector:willSelector]) {
         [self.delegate performSelector:willSelector];
     }
@@ -51,9 +60,24 @@
     // TODO do animation stuff
     
     SEL didSelector = NSSelectorFromString([NSString stringWithFormat:@"cellDidPan%@",newStateString]);
-    if (delegateConforms &&
+    if (delegateExistsAndConforms &&
         [self.delegate respondsToSelector:didSelector]) {
         [self.delegate performSelector:didSelector];
+    }
+    
+    [self setPanState:newState];
+}
+
+#pragma mark - Property Overrides
+
+- (void)setPanState:(SLPanningTableViewCellState)panState
+{
+    SLPanningTableViewCellState oldState = _panState;
+    _panState = panState;
+    if (self.delegate &&
+        [self.delegate conformsToProtocol:@protocol(SLPanningTableViewCellDelegate)] &&
+        [self.delegate respondsToSelector:@selector(cell:changedFromState:toState:)]) {
+        [self.delegate cell:self changedFromState:oldState toState:panState];
     }
 }
 

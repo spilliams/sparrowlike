@@ -21,6 +21,7 @@ typedef enum {
     SLPanningTableViewCellStateClosed,
     SLPanningTableViewCellStateOpenLeft,
     SLPanningTableViewCellStateOpenRight,
+    SLPanningTableViewCellStateTransitory,
 } SLPanningTableViewCellState;
 
 /** A panning cell responds to horizontal pan gestures that "open" and "close"
@@ -42,7 +43,7 @@ typedef enum {
 /** Classes that conform to SLPanningCellDelegate may receive messages about the
  state of panning cells.
  
- Note that the "will" methods won't fire unless it's absolutely certain that the
+ Note that the Events methods won't fire unless it's absolutely certain that the
  cell will end up in that state. That is, if a pan gesture opens the cell most
  of the way, then closes it most of the way, then ends, the only calls made to
  the delegate will be -cellWillPanClosed: and -cellDidPanClosed:.
@@ -50,6 +51,14 @@ typedef enum {
 @protocol SLPanningTableViewCellDelegate <NSObject>
 
 @optional
+///-------------------------------
+/// @name Cell Pan Events
+///-------------------------------
+/// Fires when the cell changes pan state
+/// @param cell The cell
+/// @param oldState The cell's previous state
+/// @param newState The cell's current state
+- (void)cell:(SLPanningTableViewCell *)cell changedFromState:(SLPanningTableViewCellState)oldState toState:(SLPanningTableViewCellState)newState;
 /// Fires when the cell is about to start its animation towards being open.
 /// @param cell The cell
 - (void)cellWillPanOpen:(SLPanningTableViewCell *)cell;

@@ -6,3 +6,5 @@ This is an updated version of my original attempt at getting table cells to pan,
 - the demo didn't make use of a subclass pattern (or [library linking](https://gist.github.com/spilliams/5273740)), thus developers may have been confused about how to properly use the library and classes.
 
 This version attempts to rectify all of that.
+
+Requirements: this was built using Xcode 4.6.2, but version with Storyboards should work? Also this requires ARC, for now.
