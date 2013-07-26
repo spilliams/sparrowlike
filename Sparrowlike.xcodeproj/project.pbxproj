@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		190AA59F17A31737006D93D3 /* SLPanningTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 190AA59E17A31737006D93D3 /* SLPanningTableViewCell.m */; };
+		190AA5A017A3198E006D93D3 /* SLPanningTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 190AA59B17A3165E006D93D3 /* SLPanningTableView.m */; };
 		6AD3E8E5151993F700FF06E0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AD3E8E4151993F600FF06E0 /* UIKit.framework */; };
 		6AD3E8E7151993F700FF06E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AD3E8E6151993F700FF06E0 /* Foundation.framework */; };
 		6AD3E8E9151993F700FF06E0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AD3E8E8151993F700FF06E0 /* CoreGraphics.framework */; };
@@ -19,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		190AA59A17A3165E006D93D3 /* SLPanningTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLPanningTableView.h; sourceTree = "<group>"; };
+		190AA59B17A3165E006D93D3 /* SLPanningTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLPanningTableView.m; sourceTree = "<group>"; };
+		190AA59D17A31737006D93D3 /* SLPanningTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLPanningTableViewCell.h; sourceTree = "<group>"; };
+		190AA59E17A31737006D93D3 /* SLPanningTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLPanningTableViewCell.m; sourceTree = "<group>"; };
 		6AD3E8E0151993F600FF06E0 /* Sparrowlike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sparrowlike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AD3E8E4151993F600FF06E0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6AD3E8E6151993F700FF06E0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -90,6 +96,10 @@
 				6AD3E9051519948300FF06E0 /* CustomCell.m */,
 				6AD3E8EB151993F700FF06E0 /* Supporting Files */,
 				6AD3E9071519958600FF06E0 /* Constants.h */,
+				190AA59A17A3165E006D93D3 /* SLPanningTableView.h */,
+				190AA59B17A3165E006D93D3 /* SLPanningTableView.m */,
+				190AA59D17A31737006D93D3 /* SLPanningTableViewCell.h */,
+				190AA59E17A31737006D93D3 /* SLPanningTableViewCell.m */,
 			);
 			path = Sparrowlike;
 			sourceTree = "<group>";
@@ -171,6 +181,8 @@
 				6AD3E8F5151993F700FF06E0 /* AppDelegate.m in Sources */,
 				6AD3E9031519946100FF06E0 /* CustomTableViewController.m in Sources */,
 				6AD3E9061519948300FF06E0 /* CustomCell.m in Sources */,
+				190AA59F17A31737006D93D3 /* SLPanningTableViewCell.m in Sources */,
+				190AA5A017A3198E006D93D3 /* SLPanningTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +294,7 @@
 				6AD3E900151993F700FF06E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
