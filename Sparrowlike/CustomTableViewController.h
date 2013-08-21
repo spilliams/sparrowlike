@@ -9,12 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @class CustomCell;
+@class SLPanningTableView;
+@class SLPanningTableViewCell;
 
-@interface CustomTableViewController : UITableViewController <UITableViewDataSource, UIGestureRecognizerDelegate,
+@interface CustomTableViewController : UIViewController <UITableViewDataSource, UIGestureRecognizerDelegate,UITableViewDelegate,
                                                                 UIScrollViewDelegate>
-@property (nonatomic) float openCellLastTX;
-@property (nonatomic, strong) NSIndexPath *openCellIndexPath;
-- (void)handlePan:(UIPanGestureRecognizer *)panGestureRecognizer;
-- (void)snapView:(UIView *)view toX:(float)x animated:(BOOL)animated;
-
+@property (nonatomic, strong) IBOutlet SLPanningTableView *tableView;
 @end
